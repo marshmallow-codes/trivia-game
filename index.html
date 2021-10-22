@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./src/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Trivia Card Game</title>
+  </head>
+  <body>
+    <!--Sidebar with Score, Number of Clicks, and New Game Btn -->
+    <div class="sidebar">
+      <button class="sidebar__button">NEW GAME</button>
+      <div id="scoreboard">
+        <div class="score"></div>
+        <div class="tries"></div>
+      </div>
+      <h1 class="sidebar__title">Trivia Game</h1>
+    </div>
+    <!--Gameboard with Cards -->
+    <div class="gameboard">
+        <div class="gameboard--left">
+         <div class="card--left card--question card" data-icon="black">
+         </div> 
+       </div>
+       <div class="gameboard--right">
+       <div class="card card--right card--random" data-icon="red">
+         </div>
+         <div class="card card--right card--answer" data-icon="purple">
+         </div>
+         </div>
+    <!--Javascript src -->
+    <script src="./src/index.js"></script>
+  </body>
+</html>

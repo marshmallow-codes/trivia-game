@@ -1,0 +1,28 @@
+/* gameplay */
+- create a question card
+  - [JS]get random question from API
+- create two answer cards
+    - [JS]make them click on the right answer to the 
+    question
+    - [JS]track how many times they get it right
+    - [CSS]green card when right, grey wrong answer when 
+    they pick the right card, red wrong answer if they 
+    pick the wrong answer
+
+/* formatting */
+- [HTML+CSS]question left, two answers stacked
+
+/* wishlist */
+- reponsive:
+  - stacked vertically for mobile + tablet
+  - Q to left and As to right with answers stacked vertically on desktop
+- disable cards after clicked
+- randomize the order of the cards
+
+/* questions */
+- should we have anything that states how many points you need to win?
+
+/* bugs */
+- if we click the answer too fast, we get NaN for the value because the get
+method hasn't received its response yet
+    -> solution: prevent users from clicking

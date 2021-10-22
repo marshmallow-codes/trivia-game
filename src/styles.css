@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  padding: 3px;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  background: radial-gradient(#ae22ff, #e4e4e4);
+}
+
+/* Score & Clicks */
+.score {
+  width: 100%;
+  color: white;
+  font-size: 18px;
+}
+
+.tries {
+  color: white;
+  font-size: 18px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 130px;
+  height: 100vh;
+  background-color: black;
+}
+.sidebar__title {
+  color: white;
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  writing-mode: vertical-rl;
+  transform: rotate(540deg);
+  margin-top: 130px;
+  margin-left: 14%;
+}
+.sidebar__button {
+  display: inline-block;
+  padding: 1px;
+  border: 0.1em solid black;
+  margin: 0 1.3em 0.3em 16px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.2s;
+  background-color: grey;
+}
+@media all and (max-width: 30em) {
+  .sidebar__button {
+    display: block;
+    margin: 0.4em auto;
+  }
+}
+.sidebar__button:hover {
+  color: #000000;
+  background-color: #ffff;
+}
+
+/* Gameboard & Gameboard Cards  */
+.gameboard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  perspective: 1000px;
+  margin-left: 3rem;
+  margin-top: 2rem;
+}
+.gameboard--left {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.gameboard--right {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card--left {
+  background-color: white;
+  width: 90%;
+  height: 45%;
+  border-radius: 5px;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  transition: 0.5s;
+  margin: 5px;
+}
+.card--right {
+  background-color: white;
+  width: 80%;
+  height: 20%;
+  border-radius: 5px;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  transition: 0.5s;
+  margin: 5px;
+  margin-top: 2rem;
+}
+.card--right:hover {
+  border: 2px solid black;
+  box-shadow: inset 0px 0px 0px 2px #ffff;
+  box-sizing: border-box;
+}
+.card:active {
+  transform: scale(0.97);
+}
+.card__text {
+  width: 80%;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.answer--right {
+  background-color: #c5f4c5;
+  transform: scale(1.25);
+}
+.answer--wrong {
+  background-color: #fa8888;
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
